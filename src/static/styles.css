@@ -91,13 +91,14 @@ section h3 {
 /* Keep a bulleted list but make each item look like a friendly pill */
 .participants-list {
   margin: 0;
-  padding-left: 20px; /* keeps the bullet alignment */
+  padding-left: 0;
+  list-style: none; /* hide default bullets */
 }
 
 .participants-list li {
-  display: list-item; /* keep bullets */
-  list-style-type: disc;
-  list-style-position: inside;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 6px 0;
   padding: 6px 10px;
   background-color: #eef3ff;
@@ -108,6 +109,29 @@ section h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.participant-email {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.remove-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
 }
 
 /* Small message when nobody is signed up */
